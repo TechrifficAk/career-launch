@@ -386,7 +386,7 @@ body {
 
 .section-heading h2 {
     margin-bottom: 22px;
-    color: #e8eff3;
+    color: #5f9fc4;
     font-size: 46px;
     line-height: 1.2;
     font-weight: 700;
@@ -443,4 +443,50 @@ body {
 .feature-card p {
     color: #64748b;
     line-height: 1.7;
+}
+
+.features {
+    padding: 100px 24px;
+    background-color: #eff4f4;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 70px;
+}
+
+.section-label {
+    color: #0f766e;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    color: #0f172a;
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.section-heading h2 span {
+    color: #0f766e;
+}
+
+.section-description {
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.feature-card:hover .feature-icon{
+    transform: rotate(10deg) scale(1.1);
 }
