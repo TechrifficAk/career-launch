@@ -556,6 +556,7 @@ body {
     font-size: 15px;
     line-height: 1.6;
 }
+
 .how-it-works {
     padding: 100px 24px;
     background: #ffffff;
@@ -613,4 +614,42 @@ body {
         font-size: 32px;
     }
 
+}
+
+.cta {
+    padding: 100px 24px;
+    background: #0b2e35;
+}
+
+.cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-label {
+    margin-bottom: 14px;
+    color: #7dd3d8;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.cta h2 span {
+    color: #7dd3d8;
+}
+
+.cta-content > p:not(.cta-label) {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #b7c9cc;
+    font-size: 16px;
+    line-height: 1.6;
 }
