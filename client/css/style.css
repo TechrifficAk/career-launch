@@ -560,6 +560,8 @@ Child = precisely positioned. */
     padding: 40px 30px;
     border-radius: 18px;
     text-align: center;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .step-card h3 {
