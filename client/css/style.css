@@ -13,6 +13,17 @@ body {
     background-color: white;
     border-bottom: 1px solid #e5e7eb;
 }
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+    cursor: pointer;
+    color: #021526;
+
+}
 
 .nav-container {
     max-width: 1200px;
@@ -600,7 +611,19 @@ body {
 }
 
 @media (max-width: 768px) {
+     
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
 
+    .menu-toggle {
+        display: block;
+    }
+    
+    .features-grid {
+    grid-template-columns: 1fr;
+    }
     .steps {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -617,8 +640,20 @@ body {
     .footer-container {
     grid-template-columns: 1fr;
     gap: 40px;
-}
+    }
 
+    .footer .footer-container {
+        grid-template-columns: 1fr !important;
+
+    }
+
+    .nav-links.mobile-open,
+    .nav-actions.mobile-open {
+        display: flex;
+    }
+}
+   
+      
 }
 
 .cta {
