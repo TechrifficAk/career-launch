@@ -42,6 +42,15 @@ addButton.addEventListener("click", function () {
 
     newItem.appendChild(applicationInfo);
 
+    const companyName = document.createElement("p");
+    companyName.textContent = "New Company" ;
+    applicationInfo.appendChild(companyName);
+
+    const status = document.createElement("span");
+    status.className = "status applied";
+    status.textContent = "Applied";
+    newItem.appendChild(status);
+
 });
 
 
