@@ -923,3 +923,22 @@ html {
     max-height: 300px;
     overflow-y: auto;
 }
+.recent-applications::-webkit-scrollbar {
+    width: 6px;
+}
+
+.recent-applications::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
+
+.recent-applications::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.company-icon {
+    transition: transform 0.2s ease;
+}
+
+.application-item:hover .company-icon {
+    transform: scale(1.08);
+}
