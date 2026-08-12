@@ -56,7 +56,8 @@ saveButton.addEventListener("click", function () {
         `;
     recentApplications.appendChild(newItem);
     jobTitleInput.value = "";
-    companyNameInput.value = "";
+    companyNameInput.value = "";          
+    addForm.style.display = "none";
 });
 /*                 OR
 createElement() = MAKE it.  textContent = PUT TEXT inside it. appendChild() = PUT IT INTO THE PAGE*/
@@ -94,4 +95,13 @@ status.textContent = "Applied";
 
 newItem.appendChild(status);*/
 
+const cancelButton = document.querySelector("#cancel-application");
 
+cancelButton.addEventListener("click", function () {
+
+    addForm.style.display = "none";
+
+    jobTitleInput.value = "";
+    companyNameInput.value = "";
+
+});

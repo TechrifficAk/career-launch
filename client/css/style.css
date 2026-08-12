@@ -813,8 +813,38 @@ html {
 .add-application-form input {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+.add-application-form {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0 30px;
+    align-items: center;
+}
 
+.add-application-form input {
+    flex: 1;
+    min-width: 0;
+}
+
+#save-application {
+    flex-shrink: 0;
+}
 .add-application-form input:focus {
     border-color: #06515e;
     box-shadow: 0 0 0 3px rgba(6, 81, 94, 0.1);
+}
+ 
+#cancel-application {
+    padding: 13px 18px;
+    background-color: transparent;
+    color: #06515e;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#cancel-application:hover {
+    background-color: #f1f5f9;
 }
