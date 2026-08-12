@@ -848,3 +848,78 @@ html {
 #cancel-application:hover {
     background-color: #f1f5f9;
 }
+#application-status {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background-color: white;
+    color: #374151;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+#application-status:focus {
+    border-color: #06515e;
+    box-shadow: 0 0 0 3px rgba(6, 81, 94, 0.1);
+}
+
+.offer {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.application-item {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.application-item {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.application-item:hover {
+    background-color: #f8fafc;
+    transform: translateX(4px);
+}
+#cancel-application {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#cancel-application:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-1px);
+}
+#save-application {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#save-application:hover {
+    background-color: #09697a;
+    transform: translateY(-1px);
+}
+.dashboard-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.3);
+}
+.recent-applications {
+    margin-top: 28px;
+    max-height: 300px;
+    overflow-y: auto;
+}

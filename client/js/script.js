@@ -70,6 +70,7 @@ if (status === "offer") {
     jobTitleInput.value = "";
     companyNameInput.value = "";
     addForm.style.display = "none";
+    statusInput.value = "applied";
 });
 /*                 OR
 createElement() = MAKE it.  textContent = PUT TEXT inside it. appendChild() = PUT IT INTO THE PAGE*/
