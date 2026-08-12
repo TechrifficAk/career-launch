@@ -29,16 +29,26 @@ saveButton.addEventListener("click", function () {
 
     const jobTitle = jobTitleInput.value;
     const companyName = companyNameInput.value;
+    const status = statusInput.value;
 
     if (jobTitle === "" || companyName === "") {
         alert("Please fill both fields.");
         return;
     }
     const companyLetter = companyName.charAt(0);
-
+    
+if (status === "applied") {
     const appliedCount = document.querySelector(".stat-card h3");
     appliedCount.textContent = Number(appliedCount.textContent) + 1;
-
+}
+if (status === "interview") {
+    const interviewCount = document.querySelectorAll(".stat-card h3")[1];
+    interviewCount.textContent = Number(interviewCount.textContent) + 1;
+}
+if (status === "offer") {
+    const offerCount = document.querySelectorAll(".stat-card h3")[2];
+    offerCount.textContent = Number(offerCount.textContent) + 1;
+}
     const recentApplications = document.querySelector(".recent-applications");
 
     const newItem = document.createElement("div");
@@ -52,11 +62,13 @@ saveButton.addEventListener("click", function () {
             <p>${companyName}</p>
         </div>
 
-        <span class="status applied">Applied</span>
+        <span class="status ${status}">
+        ${status}
+        </span>
         `;
     recentApplications.appendChild(newItem);
     jobTitleInput.value = "";
-    companyNameInput.value = "";          
+    companyNameInput.value = "";
     addForm.style.display = "none";
 });
 /*                 OR
@@ -105,3 +117,4 @@ cancelButton.addEventListener("click", function () {
     companyNameInput.value = "";
 
 });
+const statusInput = document.querySelector("#application-status");
