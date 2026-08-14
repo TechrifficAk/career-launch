@@ -17,6 +17,7 @@ const jobTitleInput = document.querySelector("#job-title");
 const companyNameInput = document.querySelector("#company-name");
 const addButton = document.querySelector(".add-btn");
 const addForm = document.querySelector(".add-application-form");
+const statusInput = document.querySelector("#application-status");
 
 addButton.addEventListener("click", function () {
 
@@ -36,19 +37,19 @@ saveButton.addEventListener("click", function () {
         return;
     }
     const companyLetter = companyName.charAt(0);
-    
-if (status === "applied") {
-    const appliedCount = document.querySelector(".stat-card h3");
-    appliedCount.textContent = Number(appliedCount.textContent) + 1;
-}
-if (status === "interview") {
-    const interviewCount = document.querySelectorAll(".stat-card h3")[1];
-    interviewCount.textContent = Number(interviewCount.textContent) + 1;
-}
-if (status === "offer") {
-    const offerCount = document.querySelectorAll(".stat-card h3")[2];
-    offerCount.textContent = Number(offerCount.textContent) + 1;
-}
+
+    if (status === "applied") {
+        const appliedCount = document.querySelector(".stat-card h3");
+        appliedCount.textContent = Number(appliedCount.textContent) + 1;
+    }
+    if (status === "interview") {
+        const interviewCount = document.querySelectorAll(".stat-card h3")[1];
+        interviewCount.textContent = Number(interviewCount.textContent) + 1;
+    }
+    if (status === "offer") {
+        const offerCount = document.querySelectorAll(".stat-card h3")[2];
+        offerCount.textContent = Number(offerCount.textContent) + 1;
+    }
     const recentApplications = document.querySelector(".recent-applications");
 
     const newItem = document.createElement("div");
@@ -65,7 +66,10 @@ if (status === "offer") {
         <span class="status ${status}">
         ${status}
         </span>
+        <button class="delete-btn">Delete</button>
+        
         `;
+
     recentApplications.appendChild(newItem);
     jobTitleInput.value = "";
     companyNameInput.value = "";
@@ -113,9 +117,8 @@ const cancelButton = document.querySelector("#cancel-application");
 cancelButton.addEventListener("click", function () {
 
     addForm.style.display = "none";
-
     jobTitleInput.value = "";
     companyNameInput.value = "";
+    statusInput.value = "applied";
 
 });
-const statusInput = document.querySelector("#application-status");
