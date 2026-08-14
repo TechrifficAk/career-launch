@@ -770,79 +770,61 @@ html {
 
 .add-application-form {
     display: none;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
     margin: 18px 0 10px;
+    box-sizing: border-box;
 }
 
-.add-application-form input {
-    flex: 1;
+.add-application-form input,
+.add-application-form select {
+    width: 100%;
+    min-width: 0;
     padding: 13px 15px;
     border: 1px solid #cbd5e1;
     border-radius: 10px;
     font-size: 14px;
     outline: none;
     box-sizing: border-box;
+    background-color: white;
 }
 
-.add-application-form input:focus {
-    border-color: #0b6570;
+.add-application-form input:focus,
+.add-application-form select:focus {
+    border-color: #06515e;
+    box-shadow: 0 0 0 3px rgba(6, 81, 94, 0.1);
 }
-#save-application {
-    padding: 9px 14px;
-    background-color: #06515e;
-    color: white;
-    border: none;
+
+#application-status {
+    grid-column: 1 / -1;
+}
+
+#save-application,
+#cancel-application {
+    width: 100%;
+    padding: 13px 14px;
     border-radius: 10px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+#save-application {
+    background-color: #06515e;
+    color: white;
+    border: none;
 }
 
 #save-application:hover {
     background-color: #09697a;
 }
-.add-application-form input {
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
 
-.add-application-form input:focus {
-    border-color: #06515e;
-    box-shadow: 0 0 0 3px rgba(6, 81, 94, 0.1);
-}
-.add-application-form input {
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.add-application-form {
-    display: flex;
-    gap: 12px;
-    margin: 15px 0 30px;
-    align-items: center;
-}
-
-.add-application-form input {
-    flex: 1;
-    min-width: 0;
-}
-
-#save-application {
-    flex-shrink: 0;
-}
-.add-application-form input:focus {
-    border-color: #06515e;
-    box-shadow: 0 0 0 3px rgba(6, 81, 94, 0.1);
-}
- 
 #cancel-application {
-    padding: 13px 18px;
     background-color: transparent;
     color: #06515e;
     border: 1px solid #cbd5e1;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    white-space: nowrap;
 }
 
 #cancel-application:hover {
@@ -886,14 +868,7 @@ html {
         transform: translateY(0);
     }
 }
-.application-item {
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
 
-.application-item:hover {
-    background-color: #f8fafc;
-    transform: translateX(4px);
-}
 #cancel-application {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
@@ -939,9 +914,14 @@ html {
     transition: transform 0.2s ease;
 }
 
-.application-item:hover .company-icon {
-    transform: scale(1.08);
+.application-item {
+transition: background-color 0.2s ease;
 }
+
+.application-item:hover {
+background-color: #e7ecf018;
+}
+
 .delete-btn {
     margin-left: 10px;
     padding: 6px 10px;

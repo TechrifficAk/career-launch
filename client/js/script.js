@@ -21,7 +21,7 @@ const statusInput = document.querySelector("#application-status");
 
 addButton.addEventListener("click", function () {
 
-    addForm.style.display = "flex";
+    addForm.style.display = "grid";
 
 });
 const saveButton = document.querySelector("#save-application")
