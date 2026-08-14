@@ -122,15 +122,43 @@ cancelButton.addEventListener("click", function () {
     statusInput.value = "applied";
 
 });
-const buttons = document.querySelectorAll(".delete-btn");
-buttons.forEach(function (element) {
+// const buttons = document.querySelectorAll(".delete-btn");
+// buttons.forEach(function (element) {
 
-    console.log(buttons);
-    element.addEventListener("click", function () {
-        const application = element.closest(".application-item");
+//     console.log(buttons);
+//     element.addEventListener("click", function () {
+//         const application = element.closest(".application-item");
+
+//         application.remove();
+
+//     });
+
+// });
+const recentApplications = document.querySelector(".recent-applications");
+
+recentApplications.addEventListener("click", function (event) {
+
+    if (event.target.classList.contains("delete-btn")) {
+
+        const application = event.target.closest(".application-item");
+        const status = application.querySelector(".status").textContent.trim().toLowerCase();
+
+        if (status === "applied") {
+            const appliedCount = document.querySelectorAll(".stat-card h3")[0];
+            appliedCount.textContent = Number(appliedCount.textContent) - 1;
+        }
+
+        if (status === "interview") {
+            const interviewCount = document.querySelectorAll(".stat-card h3")[1];
+            interviewCount.textContent = Number(interviewCount.textContent) - 1;
+        }
+
+        if (status === "offer") {
+            const offerCount = document.querySelectorAll(".stat-card h3")[2];
+            offerCount.textContent = Number(offerCount.textContent) - 1;
+        }
 
         application.remove();
-
-    });
+    }
 
 });
