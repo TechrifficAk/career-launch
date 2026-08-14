@@ -122,3 +122,15 @@ cancelButton.addEventListener("click", function () {
     statusInput.value = "applied";
 
 });
+const buttons = document.querySelectorAll(".delete-btn");
+buttons.forEach(function (element) {
+
+    console.log(buttons);
+    element.addEventListener("click", function () {
+        const application = element.closest(".application-item");
+
+        application.remove();
+
+    });
+
+});
